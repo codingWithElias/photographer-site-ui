@@ -1,0 +1,31 @@
+$nav-bg: #1690A7;
+$nav-link-color: #eee;
+$banner-bg: #1D1D1D;
+$mobile-link-bg: #fff;
+
+/* background img*/
+/*HOME*/
+$bg-1: "../img/home-bg-1.jpg";
+$bg-2: "../img/home-bg-2.jpg";
+$bg-3: "../img/home-bg-3.jpg";
+
+/*CONTACT and works*/
+$bg-c-1: "../img/contact-bg-1.jpg";
+$bg-p-1: "../img/portp-bg-1.jpg";
+
+
+
+$tabe : 768px;
+$desktop : 992px;
+
+@mixin tabe {
+    @media(min-width: #{$tabe}){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media(min-width: #{$desktop}){
+        @content;
+    }
+}

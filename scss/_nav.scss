@@ -1,0 +1,126 @@
+@import "_vars.scss";
+
+.main-nav {
+	display: none;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	background: transparent;
+	color: $nav-link-color;
+	z-index: 100;
+	.nav-logo {
+		display: flex;
+		align-items: center;
+		@include desktop {
+			margin-left: 140px;
+		}
+		.img-logo {
+			flex: 1;
+			padding: 5px;
+			padding-left: 15px;
+			img {
+				width: 40px;
+				max-height: 40px;
+			}
+			@include desktop {
+		       padding-left: 5px;
+			}
+		}
+		
+		h2{
+			flex: 1;
+			padding: 15px;
+		    a{
+			   font-size: 20px;
+			   font-family: 'Roboto', sans-serif;
+	           text-decoration: none;
+	           font-weight: 100;
+	           color: #555;
+	           &:hover{
+					color: #0088FF;
+				}
+				@include desktop {
+					font-size: 25px;
+					color: #ccc;
+				}
+			}
+		}
+		#mainMenu {
+			width: 30px;
+			height: 30px;
+			margin: 0px 10px;
+			display: block;
+			cursor: pointer;
+			&:hover{
+				opacity: .3;
+			}
+			@include tabe {
+		        display: none;
+		    }
+		}
+		@include tabe {
+	        float: left;
+	    }
+	}
+	.nav-links {
+		background: $mobile-link-bg;
+		display: none;
+		border-top: 1px solid #eee;
+		@include desktop {
+			margin-right: 100px;
+		}
+		li{
+			list-style: none;
+			text-align: center;
+			a{
+				display: block;
+				padding: 17px;
+				text-decoration: none;
+				font-family: 'Montserrat', sans-serif;
+				color: #888;
+				font-size: 13px;
+				text-transform: uppercase;
+				font-weight: 400;
+				&:hover{
+					color: #0088FF;
+				}
+
+				@include tabe {
+				    display: inline-block;
+				    color: #888;
+				}
+			}
+			@include tabe {
+				box-sizing: border-box;
+			    display: inline-block;
+			}
+		}
+		@include tabe {
+			float: right;
+		    display: inline-block;
+		    background: transparent;
+		}
+	}
+
+	@include tabe {
+	}
+	.active a{
+		color: #0088FF !important;
+	}
+}
+
+.on-scroll{
+	background: #fff !important;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);
+	.nav-logo {
+
+		h2{
+			a{
+               color: #333;
+			}
+		}
+		i {
+			color: #333;
+		}
+	}
+}

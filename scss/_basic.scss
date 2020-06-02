@@ -1,0 +1,23 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Roboto', sans-serif;
+}
+
+@font-face{
+	font-family: "Montserrat";
+	src: url('../fonts/custom/Montserrat-Bold.ttf');
+}
+@font-face{
+	font-family: "Pacifico";
+	src: url('../fonts/custom/Pacifico-Regular.ttf');
+}
+@font-face{
+	font-family: "Roboto";
+	src: url('../fonts/custom/Roboto-Thin.ttf');
+}

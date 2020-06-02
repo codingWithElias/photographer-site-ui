@@ -1,0 +1,181 @@
+.main-banner-contact {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background: url($bg-c-1) $banner-bg;
+	background-size: cover;
+	background-position: bottom;
+	max-height: 400px;
+	height: 50vh;
+	position: relative;
+	@include tabe {
+		max-height: none;
+	    background-attachment: fixed;
+	}
+	.title {
+		background: rgba(0,0,0,.6);
+		padding: 20px 30px;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);
+		border-radius: 10px;
+		z-index: 2;
+		width: 90%;
+		@include tabe {
+			width: 60%;
+		}
+		@include desktop {
+			width: 40%;
+		}
+		hr {
+			border: 2px solid #ccc;
+			width: 150px;
+			margin: 10px auto;
+		}
+	}
+    h1 {
+	  font-family: 'Montserrat', sans-serif;
+      color: #aaa;
+      text-align: center;
+      font-weight: 400;
+      font-size: 40px;
+      @include tabe {
+        font-size: 50px;
+        font-weight: 700;
+	  }
+    }
+
+    .overl {
+    	position: absolute;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+		width: 100%;
+		height: 100%;
+		background: #000;
+		opacity: .2;
+	}
+}
+.main-section {
+	.p-desc {
+        color: #444;
+		text-align: center;
+		font-size: 17px;
+		line-height: 2em;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 200;
+        padding: 0px 5%;
+	}
+	.contact {
+		width: 90%;
+		margin: 40px auto;
+		.address {
+			display: flex;
+			text-align: center;
+			flex-direction: column;
+			margin: 100px 0px;
+			 @include desktop {
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+			  }
+			.address-link {
+				margin: 15px 0px;
+				 @include desktop {
+					width: 300px;
+				  }
+				img{
+					width: 40px;
+				}
+				h3 {
+				  font-family: 'Roboto', sans-serif;
+                  font-weight: 300;
+			      color: #777;
+			      font-size: 17px;
+			      text-align: center;
+			      padding: 20px 5px;
+			    }
+			}
+		}
+		form {
+			display: block;
+			margin-bottom: 200px;
+			@include desktop {
+				width: 800px;
+				margin: 60px auto;
+			    margin-bottom: 200px;
+			  }
+		}
+		.row {
+			 margin: 10px 0px;
+			input {
+			  display: block;
+			  width: 100%;
+			  padding: 12px;
+			  border: 1px solid #ccc;
+			  border-radius: 4px;
+			  font-size: 16px;
+			  color: #888;
+			  outline-color: #000;
+			  font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+			}
+			textarea {
+			  display: block;
+			  width: 100%;
+			  height: 300px;
+			  padding: 12px;
+			  border: 1px solid #ccc;
+			  border-radius: 4px;
+			  resize: none;
+			  font-size: 17px;
+			  color: #888;
+			  outline-color: #000;
+			  font-family: 'Roboto', sans-serif;
+              font-weight: 300;
+			}
+			label {
+				display: block;
+				font-size: 17px;
+				line-height: 1.8em;
+				font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+		        text-align: justify;
+		        color: #777;
+		        padding: 10px 5px;
+		        font-weight: bold;
+			}
+
+			button {
+			  background-color: #008CBA;
+			  color: white;
+			  padding: 12px 20px;
+			  border: none;
+			  border-radius: 4px;
+			  cursor: pointer;
+			  float: right;
+			  font-family: 'Roboto', sans-serif;
+              font-weight: 300;
+			  &:hover {
+			     opacity: .7;
+			  }
+			}
+		}
+	}
+    .social {
+		display: flex;
+		justify-content: center;
+		margin: 20px 0px;
+		a{
+			display: block;
+			text-decoration: none;
+			margin: 0px 10px;
+			img {
+				width: 40px;
+			}
+			&:hover {
+				opacity: .7;
+			    transform: scale(1.1);
+			}	
+		}
+	}
+}

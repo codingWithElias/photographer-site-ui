@@ -1,0 +1,313 @@
+.main-banner-about {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background: url($bg-1) $banner-bg;
+	background-size: cover;
+	background-position: center;
+	max-height: 400px;
+	height: 100vh;
+	position: relative;
+	@include tabe {
+		max-height: none;
+	    background-attachment: fixed;
+	}
+	.title {
+		background: rgba(0, 0, 0, .6);
+		padding: 20px 30px;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);
+		border-radius: 10px;
+		width: 90%;
+		@include tabe {
+			width: 60%;
+		}
+		@include desktop {
+			width: 50%;
+		}
+		hr {
+			border: 2px solid #ccc;
+			width: 150px;
+			margin: 10px auto;
+		}
+	}
+    h1 {
+	  font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      font-size: 30px;
+      text-align: center;
+      font-weight: 700;
+      @include tabe {
+		font-size: 50px;
+	  }
+    }
+    h2 {
+	  font-family:  'Pacifico', cursive;	
+	  color: #ccc;
+	  text-align: center;
+	  font-size: 22px;
+      font-weight: 300;
+      @include tabe {
+		font-size: 26px;
+	  }
+    }
+
+    .overl {
+    	position: absolute;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+		width: 100%;
+		height: 100%;
+		background: #000;
+		opacity: .3;
+	}
+}
+
+.main-section-about {
+	&::after {
+	  content: "";
+	  clear: both;
+	  display: block;
+	}
+	.title-txt {
+		margin-top: 10px;
+	    font-family: 'Montserrat', sans-serif;	
+	    color: #ccc;
+	    font-size: 25px;
+	    text-align: center;
+	    padding: 15px;
+	    margin-top: 60px;
+	    font-weight: 700px;
+	    hr {
+			border: 2px solid #ddd;
+			width: 50px;
+			margin: 10px auto;
+		}
+	}
+	.about {
+		padding: 20px 0px;
+		padding-bottom: 100px;
+		h1{
+		    font-family: 'Pacifico', cursive;	
+		    text-shadow: 2px 2px 6px #ccc;
+		    color: #aaa;
+		    font-size: 26px;
+		    text-align: center;
+		    font-style: italic;
+	        width: 90%;
+			margin: 0px auto;
+		    padding: 10px 5px;
+		    font-weight: 100;
+		}
+		p{
+			width: 90%;
+			margin: 0px auto;
+			font-size: 20px;
+			line-height: 1.8em;
+            font-family: 'Roboto', sans-serif;
+            color: #444;
+	        padding: 10px 5%;
+	        font-weight: 100;
+	        @include tabe {
+				text-align: justify;
+				letter-spacing: 1px;
+			}
+			@include desktop {
+				width: 75%;
+			}
+		}
+	}
+	.info {
+		.about-info {
+			width: 100%;
+			background: #222;
+		    position: relative;
+		}
+		.my-image {
+			background: url($bg-2) #eee;
+			background-size: cover;
+			background-position: center;
+			width: 100%;
+			min-height: 400px;
+			opacity: 1;
+			@include tabe {
+				max-height: none;
+				height: 70vh;
+			}
+			@include desktop {
+			    opacity: .15;
+				max-height: none;
+				height: 80vh;
+			}
+		}
+		.me {
+			display: none;
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			@include desktop {
+				display: block;
+			}
+		}
+		h1 {
+		  font-family: 'Montserrat', sans-serif;
+	      color: #888;
+	      font-size: 36px;
+	      font-weight: 700;
+	      text-align: center;
+	      padding: 20px 5px;
+	    }
+	    p{
+	    	text-align: center;
+			width: 90%;
+			margin: 0px auto;
+			font-size: 20px;
+			line-height: 1.8em;
+	        font-family: 'Roboto', sans-serif;
+	        color: #777;
+	        padding: 0px 5%;
+	        @include tabe {
+				width: 760px;
+			}
+		}
+
+		.social {
+			display: flex;
+			justify-content: center;
+			margin: 20px 0px;
+			a{
+				display: block;
+				text-decoration: none;
+				margin: 0px 10px;
+				background: #fff;
+				img {
+					width: 40px;
+				}
+				&:hover {
+					opacity: .7;
+					transform: scale(1.1);
+				}	
+			}
+		}
+	}
+	.list {
+		display: flex;
+		flex-direction: column;
+		.list-item {
+			margin: 20px 0px;
+			@include desktop {
+				width: 80%;
+				margin: 20px auto;
+			}
+			h2{
+	            color: #555;
+	            padding: 10px 0px;
+	            width: 90%;
+	            margin: 0px auto;
+	            font-family: 'Roboto', sans-serif;
+	            font-weight: 100;
+	            letter-spacing: 8px;
+	            font-size: 17px;
+	            font-weight: 200;
+			}
+			.progress-bar {
+				width: 90%;
+				height: 30px;
+				background: #F1F1F1;
+				margin: 0px auto;
+				.progress-val {
+					background: #777;
+					height: 100%;
+					line-height: 30px;
+					text-align: center;
+					color: #eee;
+					font-family: 'Roboto', sans-serif;
+	                font-weight: 300;
+				}
+				.pv-25{
+					width: 25%;
+				}
+				.pv-50{
+					width: 50%;
+				}
+				.pv-75{
+					width: 75%;
+				}
+				.pv-80{
+					width: 80%;
+				}.pv-85{
+					width: 85%;
+				}
+				.pv-90{
+					width: 90%;
+				}
+				.pv-95{
+					width: 95%;
+				}
+				.pv-99{
+					width: 99%;
+				}
+			}
+		}
+	}
+	.list-two {
+		background: url($bg-3) $banner-bg;
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		min-height: 400px;
+		padding: 10px 0px;
+		margin: 40px 0px;
+		@include tabe {
+			max-height: none;
+			height: 50vh;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			background-attachment: fixed;
+
+		}
+		.list-item {
+			background: rgba(0,0,0,.7);
+			text-align: center;
+			width: 200px;
+			height: 100px;
+			margin: 60px auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			@include tabe {
+				width: 30%;
+				margin: 5% 10%;
+			}
+			@include desktop {
+				width: 200px;
+				margin: 20px;
+			}
+			h6{
+				color: #fff;
+	            font-family: 'Roboto', sans-serif;
+	            font-weight: 100;
+	            letter-spacing: 8px;
+	            font-size: 20px;
+			}
+			h4{
+				color: #ccc;
+	            font-family: 'Roboto', sans-serif;
+	            font-weight: 400;
+	            font-size: 20px;
+	            padding: 10px 0px;
+			}
+		}
+	}
+}
+.some-margin {
+	margin-top: 150px;
+}
